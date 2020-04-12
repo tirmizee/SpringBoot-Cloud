@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
 	
 	@GetMapping(path = "/hello")
-	public String hello(HttpServletRequest request) {
+	public String hello(HttpServletRequest request) throws InterruptedException {
+//		Thread.sleep(1500);
 		return "hello product service port : " + request.getLocalPort();
 	}
 
